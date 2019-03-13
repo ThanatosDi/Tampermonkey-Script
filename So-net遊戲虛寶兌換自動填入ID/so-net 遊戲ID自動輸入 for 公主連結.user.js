@@ -17,4 +17,5 @@
    document.querySelector("select#server_channel_list").value="1" //伺服器 1=美食殿堂 2=真布真布王國
    document.querySelector("input#user_id").focus();
    document.querySelector("input#vp_no").focus();
+   svp()
 })();
