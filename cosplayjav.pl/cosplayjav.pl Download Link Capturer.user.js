@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         cosplayjav.pl Download Link Capturer.
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ThanatosDi/Tampermonkey-Script/blob/master/cosplayjav.pl/cosplayjav.pl%20Download%20Link%20Capturer.user.js
 // @version      1.0
 // @description  fast to get the video download links.
 // @author       ThanatosDi
