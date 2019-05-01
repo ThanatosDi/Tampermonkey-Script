@@ -1,0 +1,4 @@
+*://acg18.life/wp-content/themes/wpdx/assets/js/base.js*
+*://acg18.life/wp-content/themes/wpdx/assets/live2d/js/messages.js*
+*://acg18.life/wp-content/themes/wpdx/js/activate-power-mode.js*
+*://acg18.life/wp-content/themes/wpdx/assets/live2d/js/live2d.js*
