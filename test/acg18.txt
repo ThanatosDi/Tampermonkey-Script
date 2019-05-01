@@ -2,3 +2,7 @@
 *://acg18.life/wp-content/themes/wpdx/assets/live2d/js/messages.js*
 *://acg18.life/wp-content/themes/wpdx/js/activate-power-mode.js*
 *://acg18.life/wp-content/themes/wpdx/assets/live2d/js/live2d.js*
+https://acg18.life/wp-content/themes/wpdx/assets/js/base.js?ver=3.6
+https://acg18.life/wp-content/themes/wpdx/assets/live2d/js/live2d.js?v=1.0.2
+https://acg18.life/wp-content/themes/wpdx/assets/live2d/js/messages.js?v=1.2.98
+https://acg18.life/wp-content/themes/wpdx/js/activate-power-mode.js
