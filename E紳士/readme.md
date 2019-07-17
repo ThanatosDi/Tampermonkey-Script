@@ -16,4 +16,5 @@ BT軟體請自行準備
   1. 安裝腳本:
     [腳本安裝](https://github.com/ThanatosDi/Tampermonkey-Script/raw/master/E%E7%B4%B3%E5%A3%AB/E%E7%B4%B3%E5%A3%AB.user.js)
   2. 開始享受～  
+  3. 感謝 [SentenceDot](https://github.com/SentenceDot)  
 ![E紳士](https://raw.githubusercontent.com/ThanatosDi/Tampermonkey-Script/master/E%E7%B4%B3%E5%A3%AB/imgs/read.png)
