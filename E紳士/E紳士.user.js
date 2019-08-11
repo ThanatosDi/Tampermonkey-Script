@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         E紳士
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  在E紳士看本本時不用一頁一頁看，直接幫你拉成直條滑著看～一時看本一時爽，一直看本一直爽(?)，主要作者:SentenceDot，協助:ThanatosDi
 // @icon         https://www.google.com/s2/favicons?domain=e-hentai.org
 // @author       SentenceDot, ThanatosDi
