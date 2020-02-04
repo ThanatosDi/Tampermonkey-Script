@@ -1,0 +1,71 @@
+// ==UserScript==
+// @name         快樂玩計算總課金數量
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  計算快樂玩平台
+// @author       ThanatosDi
+// @match        https://www.mangot5.com/Index/Billing/History
+// @match        https://www.mangot5.com/Index/Billing/History?cPage=*
+// @grant        none
+// @require      https://cdnjs.cloudflare.com/ajax/libs/async/3.1.1/async.min.js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
+
+// ==/UserScript==
+var Price = 0
+var PageNum
+function GetPageNum(callback){
+    fetch(`https://www.mangot5.com/Index/Billing/History?cPage=1`)
+        .then(data => {return data.text()})
+        .then(
+            BodyText => {
+                var Body = document.implementation.createHTMLDocument().documentElement;
+                Body.innerHTML = BodyText
+                PageNum = Body.querySelectorAll('body > div.wrap > div > div.page.text-center ul li').length
+                return callback(null, PageNum, 1);
+            }
+        )
+}
+
+function fetchPage(index, _index, callback){
+    fetch(`https://www.mangot5.com/Index/Billing/History?cPage=${_index}`)
+        .then(data => {return data.text()})
+        .then(BodyText => {
+            var Body = document.implementation.createHTMLDocument().documentElement;
+            Body.innerHTML = BodyText
+            //console.log(`https://www.mangot5.com/Index/Billing/History?cPage=${_index}`)
+            Body.querySelectorAll('tr.text-center').forEach(element=>{
+                //console.log(element.cells[0].textContent)
+                if(element.cells[4].className=='success'){
+                    Price += parseInt(element.cells[1].textContent.replace(' TWD', ''))
+                }
+            })
+        })
+        .then(() => {
+            if(_index < index-1){
+                _index += 1
+                fetchPage(index, _index, callback)
+            }
+            else if(_index==index-1){
+                return callback(null, Price)
+            }
+        })
+}
+
+function creatElement(Price, callback){
+    var table = document.querySelector('body > div.wrap > div > div.table-responsive.history')
+    var divElement = document.createElement('div')
+    divElement.innerHTML = `總課金金額: ${Price} 元`
+    table.parentNode.insertBefore(divElement, table)
+}
+
+
+(function() {
+    'use strict';
+    async.waterfall([
+        GetPageNum,
+        fetchPage,
+        creatElement
+    ], function (err, result) {
+        console.log(`Error: ${error}, Result: ${result}`)
+    })
+})();
