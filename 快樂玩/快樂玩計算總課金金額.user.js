@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         快樂玩計算總課金金額
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/ThanatosDi/Tampermonkey-Script/tree/master/%E5%BF%AB%E6%A8%82%E7%8E%A9
 // @version      1.1
 // @description  計算快樂玩平台課金總金額
 // @author       ThanatosDi
